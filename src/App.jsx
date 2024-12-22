@@ -3,9 +3,9 @@ import "./App.css";
 import diary from "./imgvid/diary.png";
 import udaan from "./imgvid/udaan.jpg";
 import valientine from "./imgvid/valentine.jpg";
-import aakhri from "./imgvid/aakhri.jpg";
-import aise from "./imgvid/aise.jpg";
-import demo from "./imgvid/demo.mp4";
+import aakhri from "./imgvid/aakhri.png";
+import aise from "./imgvid/kaise.png";
+import demo from "./imgvid/FINAL.mp4";
 
 function App() {
     const [isSplashVisible, setSplashVisible] = useState(true);
@@ -17,8 +17,8 @@ function App() {
 
         supportbtn.addEventListener("click", () => {
             arrow.classList.toggle("rotate");
-            let textNode = supportbtn.childNodes[0]; 
-            if (textNode.nodeType === 3) { 
+            let textNode = supportbtn.childNodes[0];
+            if (textNode.nodeType === 3) {
                 textNode.nodeValue = supportbtn.classList.contains("active") ? "Support  " : "Support Please";
             }
             supportbtn.classList.toggle("active");
@@ -52,32 +52,34 @@ function App() {
 
                     <div className="texts">
                         <p>Mayank Verma</p>
-                        <p id="para">
-                            I am Mayank Verma, an Indian Independent artist hailing from Delhi, and I wear multiple hats as a music producer, composer, and singer-songwriter. Rooted in Saharanpur,
-                            Uttar Pradesh, my musical style blends acoustic hues, keys, and guitar, crafting a captivating narrative that resonates with heartfelt emotions.
-                        </p>
+                        <p id="para">I am Mayank Verma, an Indian Independent artist hailing from Delhi, and I wear multiple hats as a music producer, composer, and singer-songwriter. Rooted in Saharanpur, Uttar Pradesh, my musical style blends acoustic hues, keys, and guitar, crafting a captivating narrative that resonates with heartfelt emotions.</p>
                     </div>
 
                     <div className="icons">
-                        <a href="https://insta.openinapp.co/8q5ex"><i className="ri-instagram-line"></i></a>
-                       <a href="mailto:officialmayankmusic@gmail.com"> <i className="ri-mail-send-line"></i></a>
-                       <a href="https://yt.openinapp.co/b5z79"> <i className="ri-youtube-line"></i></a>
-                       <a href="https://spotify.openinapp.co/rcm28"><i className="ri-spotify-line"></i></a> 
-                    </div>
-
-                    <div className="texts2">
-                        <p>
-                            Harmonizing life's highs and lows through the language of music. <br />
-                            <br />
-                            <br />
-                            Here we go...
-                        </p>
+                        <a href="https://insta.openinapp.co/8q5ex">
+                            <i className="ri-instagram-line"></i>
+                        </a>
+                        <a href="mailto:officialmayankmusic@gmail.com">
+                            <i className="ri-mail-send-line"></i>
+                        </a>
+                        <a href="https://yt.openinapp.co/b5z79">
+                            <i className="ri-youtube-line"></i>
+                        </a>
+                        <a href="https://spotify.openinapp.co/rcm28">
+                            <i className="ri-spotify-line"></i>
+                        </a>
                     </div>
 
                     <div className="container2">
                         <p>My recent releases</p>
                         <hr />
-                       <a href="https://yt.openinapp.co/mh8nk"> <img src={diary} alt="your image" /></a>
+                        <a href="https://yt.openinapp.co/mh8nk">
+                            {" "}
+                            <img src={diary} alt="your image" />
+                        </a>
+                        <div className="textdairy">
+                            <p>Diary ~ Mayank Verma</p>
+                        </div>
                     </div>
 
                     <div className="texts3">
@@ -88,32 +90,54 @@ function App() {
                     <div className="container3">
                         <div className="box-container">
                             <div className="box">
-                               <a href=" https://yt.openinapp.co/980g0 "><img src={aakhri} alt="" /></a> 
+                                <a href=" https://yt.openinapp.co/980g0 ">
+                                    <img src={aakhri} alt="" />
+                                </a>
                             </div>
-                            <div className="title"><p>Aakhri Sawal (original)~ Mayank Verma</p></div>
+                            <div className="title">
+                                <p>Aakhri Sawal (original)~ Mayank Verma</p>
+                            </div>
                         </div>
                         <div className="box-container">
                             <div className="box">
-                               <a href="https://yt.openinapp.co/7yid8"> <img src={udaan} alt="" /></a>
+                                <a href="https://yt.openinapp.co/7yid8">
+                                    {" "}
+                                    <img src={udaan} alt="" />
+                                </a>
                             </div>
-                            <div className="title"><p>Ek Ummeed (Original) ~ Mayank Verma</p></div>
+                            <div className="title">
+                                <p>Ek Ummeed (Original) ~ Mayank Verma</p>
+                            </div>
                         </div>
                         <div className="box-container">
                             <div className="box">
-                                <a href="https://yt.openinapp.co/tsy08 "><img src={valientine} alt="" /></a>
+                                <a href="https://yt.openinapp.co/tsy08 ">
+                                    <img src={valientine} alt="" />
+                                </a>
                             </div>
-                            <div className="title"><p>Deewana tera (Original)~ Manyank Verma</p></div>
+                            <div className="title">
+                                <p>Deewana tera (Original)~ Manyank Verma</p>
+                            </div>
                         </div>
                         <div className="box-container">
                             <div className="box">
-                               <a href="https://yt.openinapp.co/tsrjh"> <img src={aise} alt="" /></a>
+                                <a href="https://yt.openinapp.co/tsrjh">
+                                    {" "}
+                                    <img src={aise} alt="" />
+                                </a>
                             </div>
-                            <div className="title"><p>Kaise Aazmaate (Original)~Mayank Verma</p></div>
+                            <div className="title">
+                                <p>Kaise Aazmaate (Original)~Mayank Verma</p>
+                            </div>
                         </div>
                     </div>
 
                     <div className="buttons">
-                       <a href="https://spotify.openinapp.co/rcm28"><div className="button1">Visit my spotify directly</div></a> 
+                        <a href="https://spotify.openinapp.co/rcm28">
+                            <div className="button1">
+                                <i className="ri-spotify-line"></i> Spotify
+                            </div>
+                        </a>
 
                         <div className="supportbox">
                             <div className="supportbtn">
@@ -124,8 +148,7 @@ function App() {
                             </div>
                             <div className="dropdown-content hide">
                                 <div className="contents">
-                                    The time and effort I put into my art are fueled by your passion and engagement. To continue creating new pieces like this, consider showing your support through a
-                                    financial contribution. Together, we can bring even more creativity to life! <br />
+                                    The time and effort I put into my art are fueled by your passion and engagement. To continue creating new pieces like this, consider showing your support through a financial contribution. Together, we can bring even more creativity to life! <br />
                                     <br />
                                     <b> UPI- vermamayank321-1@oksbi</b>
                                 </div>
