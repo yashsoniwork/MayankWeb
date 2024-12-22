@@ -4,7 +4,7 @@ import diary from "./imgvid/diary.png";
 import udaan from "./imgvid/udaan.jpg";
 import valientine from "./imgvid/valentine.jpg";
 import aakhri from "./imgvid/aakhri.png";
-import aise from "./imgvid/kaise.png";
+import aise from "./imgvid/Kaise.png";
 import demo from "./imgvid/FINAL.mp4";
 import audioFile from "./imgvid/audio.mp3";
 function App() {
