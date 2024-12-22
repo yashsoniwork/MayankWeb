@@ -6,24 +6,39 @@ import valientine from "./imgvid/valentine.jpg";
 import aakhri from "./imgvid/aakhri.png";
 import aise from "./imgvid/kaise.png";
 import demo from "./imgvid/FINAL.mp4";
-
+import audioFile from "./imgvid/audio.mp3";
 function App() {
     const [isSplashVisible, setSplashVisible] = useState(true);
+    const [popup, setPopup] = useState(false);
+    const [audioplay, setAudioplay] = useState(false);
+    const [audio] = useState(new Audio(audioFile)); // Audio instance ko state mein store kiya
 
+    const handleAudioPlay = () => {
+        if (audioplay) {
+            audio.pause(); // Pause the audio
+        } else {
+            audio.play(); // Play the audio
+        }
+        setAudioplay(!audioplay); // Toggle the state
+    };
     useEffect(() => {
-        const supportbtn = document.querySelector(".supportbtn");
-        const dropdown = document.querySelector(".dropdown-content");
-        const arrow = document.querySelector(".arrow");
+        // const supportbtn = document.querySelector(".supportbtn");
+        // const dropdown = document.querySelector(".dropdown-content");
+        // const arrow = document.querySelector(".arrow");
 
-        supportbtn.addEventListener("click", () => {
-            arrow.classList.toggle("rotate");
-            let textNode = supportbtn.childNodes[0];
-            if (textNode.nodeType === 3) {
-                textNode.nodeValue = supportbtn.classList.contains("active") ? "Support  " : "Support Please";
-            }
-            supportbtn.classList.toggle("active");
-            dropdown.classList.toggle("hide");
-        });
+        setTimeout(() => {
+            setPopup(true);
+        }, 5000);
+
+        // supportbtn.addEventListener("click", () => {
+        //     arrow.classList.toggle("rotate");
+        //     let textNode = supportbtn.childNodes[0];
+        //     if (textNode.nodeType === 3) {
+        //         textNode.nodeValue = supportbtn.classList.contains("active") ? "Support  " : "Support";
+        //     }
+        //     supportbtn.classList.toggle("active");
+        //     dropdown.classList.toggle("hide");
+        // });
 
         const handleScroll = () => {
             const scrollY = window.scrollY;
@@ -40,6 +55,10 @@ function App() {
 
     return (
         <>
+            <div className="speaker" onClick={handleAudioPlay}>
+                {audioplay ? <i className="ri-volume-up-line"></i> : <i className="ri-volume-mute-line"></i>}
+            </div>
+
             <div className={"video " + (isSplashVisible ? "show" : "hidden")}>
                 <video id="intro-video" src={demo} autoPlay muted></video>
             </div>
@@ -139,9 +158,9 @@ function App() {
                             </div>
                         </a>
 
-                        <div className="supportbox">
+                        {/* <div className="supportbox">
                             <div className="supportbtn">
-                                Support
+                                <div className="supportji">Support </div>
                                 <span className="arrow">
                                     <i className="fa-solid fa-caret-down"></i>
                                 </span>
@@ -153,8 +172,18 @@ function App() {
                                     <b> UPI- vermamayank321-1@oksbi</b>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
+                    {popup === true && (
+                        <>
+
+                            <div className="popup">
+                                {/* <button className="popupclose" onClick={() => setPopup(false)}>
+                                            <i className="ri-close-line"></i>
+                                        </button> */}
+                            </div>
+                        </>
+                    )}
                 </div>
             </div>
         </>

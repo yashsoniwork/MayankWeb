@@ -1,11 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 
 body {
     background-image: url("./imgvid/b1.png");
     background-size: cover;
-    height: 227vh;
-    overflow-x:hidden;
-    
+    height: 175vh;
+    overflow-x: hidden;
 }
 
 a {
@@ -28,8 +27,7 @@ a {
     transition: opacity 1s ease;
     z-index: 10;
     overflow-y: hidden;
-    transition: all .5s ease;
-
+    transition: all 0.5s ease;
 }
 
 .video.hidden {
@@ -87,7 +85,7 @@ p {
 }
 
 .texts #para {
-    margin-top: -.5rem;
+    margin-top: -0.5rem;
     font-size: 0.9rem;
     font-weight: 300;
 }
@@ -124,7 +122,6 @@ p {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
 }
 
 .textdairy p {
@@ -172,7 +169,7 @@ hr {
     width: 8rem;
     height: auto;
 }
-.container3 .box a{
+.container3 .box a {
     display: flex;
     width: 8rem;
     height: 6rem;
@@ -213,28 +210,28 @@ hr {
     font-weight: 800;
     border: 1px solid white;
     border-radius: 30px;
-    font-size:larger;
+    font-size: large;
 }
 
 .button1 i {
     font-size: larger;
     color: white;
     margin-right: 4px;
-    font-weight:500 ;
+    font-weight: 400;
 }
 
-.buttons  a{
+.buttons a {
     text-decoration: none;
 }
 .buttons {
     font-size: large;
 }
 
-.supportbox {
+/* .supportbox {
     margin-top: 2rem;
-}
+} */
 
-.supportbox .supportbtn {
+/* .supportbox .supportbtn {
     max-width: 333px;
     color: white;
     width: 80vw;
@@ -245,15 +242,20 @@ hr {
     justify-content: center;
     align-items: center;
     transition: all 0.4s ease;
-}
+    font-weight: 550;
+    font-size: large;
+} */
 
-.arrow {
+/* .supportbox .supportbtn .supportji {
+    margin-left: 11px;
+} */
+/* .arrow {
     position: relative;
     left: 55px;
-}
+} */
 
 .dropdown-content {
-    width: 80vw;
+    width: 80.6vw;
     max-width: 333px;
     height: 27vh;
     background-color: white;
@@ -265,7 +267,6 @@ hr {
     border-radius: 0px 0px 11px 11px;
     transition: all 0.4s ease;
     opacity: 1;
-
 }
 
 .dropdown-content .contents {
@@ -276,17 +277,16 @@ hr {
     transform: rotate(180deg);
 }
 
-.supportbtn.active {
+/* .supportbtn.active {
     background-color: white;
     color: black;
     border-radius: 11px 11px 0px 0px;
-}
+} */
 
 .dropdown-content.hide {
     opacity: 0;
     visibility: hidden;
     transform: translate(0px, -60px);
-
 }
 
 video {
@@ -294,10 +294,46 @@ video {
     width: 100%;
 }
 
+.speaker {
+    position: absolute;
+    width: 52px;
+    height: 52px;
+    color: white;
+    border-radius: 100%;
+}
+
+@keyframes slideInAndGrow {
+    0% {
+        transform: translateX(400px) scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0%) scale(1);
+        opacity: 100%;
+    }
+}
+
+.popup {
+    position: fixed ;
+    top: 85%;
+    right: 0%;
+    animation-duration: 2000;
+    height: 2vh;
+    width: 61vw;
+    background-color: white;
+    padding: 20px;
+    z-index: 1;
+    background-image: url('./imgvid/fundedme.png');
+    border-radius: 52px 0px 0px 52px;
+    background-size: 0% 60%;
+    animation: slideInAndGrow 1s ease-in-out;
+    background-size: contain;
+}
+
 
 @keyframes rendered {
     from {
-        transform: translateX(600px) ;
+        transform: translateX(600px);
         opacity: 0;
         scale: 0.3;
     }
@@ -310,8 +346,6 @@ video {
 
 /* For laptop and tablet */
 @media screen and (min-width: 426px) {
-
-
     .main {
         border: 8px solid #000;
         background-color: #5e8333;
